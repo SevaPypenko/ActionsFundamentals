@@ -7,6 +7,7 @@ on:
     inputs:
       who-to-greet:
         description: 'Who to greet'
+        type: string
         required: true
         default: 'Sevandos'
 
@@ -21,7 +22,7 @@ jobs:
         id: hello-action
         uses: ./hello-world-docker-action
         with:
-          who-to-greet: ${{github.event.inputs.who-to-greet}}
+          who-to-greet: ${{inputs.who-to-greet}}
 
       - name: Output time set in the container
         run: echo "The time was ${{ steps.hello-action.outputs.time }} when the action said hello"
