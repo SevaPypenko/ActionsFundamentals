@@ -10,7 +10,7 @@ jobs:
     runs-on: Ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Run custom container action
         id: hello-action
