@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Hello world docker action
 on: 
   push:
     branches: [main]
