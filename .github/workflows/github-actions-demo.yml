@@ -34,7 +34,8 @@ jobs:
     environment: Test
     steps:
       - name: Testing print
-        run: echo | 'Testing...'
+        run: | 
+          echo 'Testing...'
   Load-Test:
     runs-on: Ubuntu-latest
     if: github.event_name == 'workflow_dispatch'
@@ -42,8 +43,8 @@ jobs:
     environment: Load-Test
     steps:
       - name: Testing print
-        run: echo | 
-          'Testing...'
+        run: | 
+          echo 'Testing...'
           sleep 15
   Production:
     runs-on: Ubuntu-latest
